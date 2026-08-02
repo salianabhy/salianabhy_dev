@@ -33,6 +33,7 @@ html {
     scroll-behavior: smooth;
     scrollbar-width: thin;
     scrollbar-color: var(--primary-blue) var(--bg-light);
+    scroll-padding-top: 24px;
 }
 
 body {
@@ -42,6 +43,7 @@ body {
     line-height: 1.5;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
 }
 
 /* Paper Grain Noise Overlay */
@@ -173,8 +175,19 @@ body::after {
 }
 
 @media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
     .nav-logo::after {
         animation: none;
+    }
+
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
     }
 }
 
@@ -880,21 +893,28 @@ body.js-active.hero-loaded .footer-symbol.hero-load-item {
 
 .project-num {
     position: absolute;
-    top: 1.2rem;
-    right: 1.2rem;
+    top: 1rem;
+    right: 1rem;
+    width: 2.6rem;
+    height: 2.6rem;
+    display: grid;
+    place-items: center;
     font-family: var(--font-title);
-    font-size: 3.2rem;
-    color: #0a0a0a;
-    opacity: 0.9;
-    text-shadow: 0 2px 8px rgba(255, 255, 255, 0.45);
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    color: #ffffff;
+    background: linear-gradient(135deg, #f4b942, #d89a10);
+    border: 2px solid rgba(255,255,255,0.9);
+    border-radius: 999px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.18);
     transition: var(--transition-smooth);
     z-index: 2;
 }
 
 .project-card:hover .project-num {
-    opacity: 1;
-    transform: scale(1.08);
-    color: var(--primary-blue);
+    transform: scale(1.08) translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.24);
 }
 
 .project-header {
@@ -1944,6 +1964,7 @@ body.js-active .section-title.title-in {
     position: relative;
     background: linear-gradient(135deg, var(--primary-blue), #000c6b);
     border-radius: 6px;
+    will-change: transform;
 }
 
 .project-thumb-image {

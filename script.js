@@ -9,6 +9,7 @@ window.addEventListener('load', () => {
     if (coverSection) {
         coverSection.scrollIntoView({ behavior: 'auto', block: 'start' });
     }
+    document.body.classList.add('is-ready');
 });
 
 document.addEventListener('DOMContentLoaded', () => {
