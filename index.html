@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhijeet Salian | Portfolio</title>
+    <meta name="description" content="Portfolio of Abhijeet Kamalaksha Salian — a pre-final year Computer Science student focused on machine learning, AI, and end-to-end product delivery.">
+    <meta name="author" content="Abhijeet Kamalaksha Salian">
+    <meta name="theme-color" content="#0020f5">
+    <meta name="color-scheme" content="light">
+
+    <!-- Open Graph / social preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Abhijeet Salian | Portfolio">
+    <meta property="og:description" content="Pre-final year CSE student focused on ML/AI internships, end-to-end projects, and deployed applications.">
+
+    <!-- Fonts: preconnect + direct stylesheet (faster than a CSS @import, which
+         forces the browser to download style.css before it even discovers the fonts) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Scroll progress indicator -->
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+
+    <!-- Vertical section dot navigator -->
+    <nav class="dot-nav" id="dot-nav" aria-label="Section navigation">
+        <a href="#cover" class="dot" data-label="Cover" aria-label="Go to Cover"></a>
+        <a href="#toc" class="dot" data-label="Index" aria-label="Go to Index"></a>
+        <a href="#profile" class="dot" data-label="Profile" aria-label="Go to Profile"></a>
+        <a href="#experience" class="dot" data-label="Experience" aria-label="Go to Experience"></a>
+        <a href="#projects" class="dot" data-label="Projects" aria-label="Go to Projects"></a>
+        <a href="#achievements" class="dot" data-label="Research" aria-label="Go to Research"></a>
+        <a href="#education" class="dot" data-label="Tech Stack" aria-label="Go to Tech Stack"></a>
+        <a href="#contact" class="dot" data-label="Contact" aria-label="Go to Contact"></a>
+    </nav>
+
+    <!-- Floating logo (nav bar removed) -->
+    <nav class="sticky-nav" id="main-nav">
+        <div class="nav-container">
+            <a href="#cover" class="nav-logo" data-text="ABHIJEET SALIAN">ABHIJEET SALIAN</a>
+        </div>
+    </nav>
+
+    <!-- Slide 1: Cover Section -->
+    <section class="section hero" id="cover">
+        <div class="hero-center">
+            <div class="logo-box hero-load-item">
+                <div class="tilted-badge hero-load-item">ML / AI</div>
+                <h1 class="hero-load-item hero-slot">ABHIJEET</h1>
+                <div class="logo-box-footer">
+                    <span class="hero-load-item hero-role" id="hero-role">PRE-FINAL YEAR CSE STUDENT</span>
+                    <div class="footer-symbol hero-load-item"></div>
+                    <span class="hero-load-item">BENGALURU, INDIA</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scrolling keyword marquee (decorative) -->
+    <div class="marquee-band" aria-hidden="true">
+        <div class="marquee-track">
+            <span>MACHINE LEARNING&nbsp; &#10022; &nbsp;PYTHON&nbsp; &#10022; &nbsp;DEEP LEARNING&nbsp; &#10022; &nbsp;FLASK&nbsp; &#10022; &nbsp;AWS&nbsp; &#10022; &nbsp;AI PRODUCTS&nbsp; &#10022; &nbsp;</span>
+            <span>MACHINE LEARNING&nbsp; &#10022; &nbsp;PYTHON&nbsp; &#10022; &nbsp;DEEP LEARNING&nbsp; &#10022; &nbsp;FLASK&nbsp; &#10022; &nbsp;AWS&nbsp; &#10022; &nbsp;AI PRODUCTS&nbsp; &#10022; &nbsp;</span>
+        </div>
+    </div>
+
+    <!-- Slide 2: Table of Contents -->
+    <section class="section toc" id="toc">
+        <div class="section-content">
+            <span class="section-kicker">Index — What's Inside</span>
+            <h2 class="section-title">TABLE OF <span class="serif-italic">CONTENT</span></h2>
+            <div class="toc-grid">
+                <!-- SVG Diagram Column -->
+                <div class="toc-diagram-container">
+                    <svg class="toc-svg" viewBox="0 0 700 500" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+                        <path class="toc-path" d="M 230 80 C 500 80, 650 200, 580 250 C 500 300, 150 280, 180 425" />
+                    </svg>
+
+                    <div class="toc-oval-wrapper oval-work" role="button" tabindex="0" aria-label="Jump to Experience" onclick="document.getElementById('experience').scrollIntoView({behavior: 'smooth'})">
+                        <span>ANALYZE</span>
+                    </div>
+                    <div class="toc-oval-wrapper oval-debt" role="button" tabindex="0" aria-label="Jump to Projects" onclick="document.getElementById('projects').scrollIntoView({behavior: 'smooth'})">
+                        <span>PREDICT</span>
+                    </div>
+                    <div class="toc-oval-wrapper oval-cry" role="button" tabindex="0" aria-label="Jump to Contact" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+                        <span>REPEAT</span>
+                    </div>
+                </div>
+
+                <!-- TOC Menu Column -->
+                <ul class="toc-menu">
+                    <li class="toc-item">
+                        <a href="#profile" class="toc-link">
+                            <span class="toc-number">01</span>
+                            <div class="toc-label-container">
+                                <span class="toc-title">Profile</span>
+                                <span class="toc-subtitle">My background & focus</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="toc-item">
+                        <a href="#experience" class="toc-link">
+                            <span class="toc-number">02</span>
+                            <div class="toc-label-container">
+                                <span class="toc-title">Education</span>
+                                <span class="toc-subtitle">MIT, MAHE & academic foundation</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="toc-item">
+                        <a href="#projects" class="toc-link">
+                            <span class="toc-number">03</span>
+                            <div class="toc-label-container">
+                                <span class="toc-title">Selected Projects</span>
+                                <span class="toc-subtitle">Image classification, price prediction & AI products</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="toc-item">
+                        <a href="#achievements" class="toc-link">
+                            <span class="toc-number">04</span>
+                            <div class="toc-label-container">
+                                <span class="toc-title">Achievements</span>
+                                <span class="toc-subtitle">Certifications & standout experiences</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="toc-item">
+                        <a href="#education" class="toc-link">
+                            <span class="toc-number">05</span>
+                            <div class="toc-label-container">
+                                <span class="toc-title">Skills</span>
+                                <span class="toc-subtitle">Languages, ML stack & tools</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="toc-item">
+                        <a href="#learning" class="toc-link">
+                            <span class="toc-number">06</span>
+                            <div class="toc-label-container">
+                                <span class="toc-title">Learning Roadmap</span>
+                                <span class="toc-subtitle">Deep learning & generative AI</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="toc-item">
+                        <a href="#contact" class="toc-link">
+                            <span class="toc-number">07</span>
+                            <div class="toc-label-container">
+                                <span class="toc-title">Get in touch</span>
+                                <span class="toc-subtitle">Let's connect & collaborate</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 3: About / Profile -->
+    <section class="section profile" id="profile">
+        <div class="section-content">
+            <span class="section-kicker">Section 01 — Who I Am</span>
+            <h2 class="section-title">01 / <span class="serif-italic">PROFILE</span></h2>
+            <div class="profile-grid">
+                <div class="profile-left">
+                    <div class="profile-contact-header">
+                        <span>E-MAIL: <a href="mailto:salianabhy@gmail.com">salianabhy@gmail.com</a> // PHONE: <a href="tel:+918928758282">+91 8928758282</a></span>
+                    </div>
+                    <div class="profile-photo-container">
+                        <img src="assets/profile.png" alt="Portrait of Abhijeet Salian" class="profile-photo-img" width="600" height="600" loading="lazy" decoding="async">
+                    </div>
+                </div>
+
+                <div class="profile-right">
+                    <div class="hello-badge">
+                        <span>HELLO</span>
+                    </div>
+                    <p class="profile-desc">
+                        I’m <strong>Abhijeet Kamalaksha Salian</strong>, a pre-final year <strong>Computer Science</strong> student at <strong>Manipal Institute of Technology, MAHE – Bengaluru Campus</strong>. I’m looking for a <strong>Machine Learning / AI internship</strong> where I can build end-to-end products and contribute from day one.
+                    </p>
+                    <p class="profile-desc">
+                        I enjoy going beyond model training and taking projects all the way to deployed applications. I’ve worked on end-to-end ML pipelines, full-stack Flask/React apps, and cloud deployment on AWS, and I’m comfortable with the fundamentals of DSA, OOP, Agile, and fast learning in new tools.
+                    </p>
+
+                    <div class="profile-stats">
+                        <div class="stat">
+                            <span class="stat-num" data-count="8">8.99</span>
+                            <span class="stat-label">CGPA</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-num" data-count="3">3rd</span>
+                            <span class="stat-label">Year, CSE</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-num" data-count="2">2</span>
+                            <span class="stat-label">ML Projects</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-num" data-count="2" data-suffix="+">2+</span>
+                            <span class="stat-label">Deployed Apps</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 4: Experience Detail -->
+    <section class="section experience" id="experience">
+        <div class="section-content">
+            <span class="section-kicker">Section 02 — Education</span>
+            <h2 class="section-title">02 / <span class="serif-italic">EDUCATION</span></h2>
+            <div class="experience-container">
+                <div class="experience-card">
+                    <div class="experience-card-header">
+                        <h3 class="exp-role">B.Tech in Computer Science and Engineering</h3>
+                        <div class="exp-company">Manipal Institute of Technology, MAHE – Bengaluru Campus</div>
+                        <div class="exp-meta">
+                            <span>Pre-Final Year (3rd Year)</span>
+                            <span>CGPA: 8.99 / 10</span>
+                        </div>
+                    </div>
+                    <div class="experience-card-body">
+                        <p>Building a strong foundation in core CS fundamentals, software engineering, and applied AI/ML concepts.</p>
+                        <p>Focused on solving real-world problems through clean architecture, data-driven decision making, and deployed applications.</p>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <div class="experience-card-header">
+                        <h3 class="exp-role">Current Focus</h3>
+                        <div class="exp-company">Machine Learning / AI Internships</div>
+                        <div class="exp-meta">
+                            <span>Building end-to-end products</span>
+                            <span>AWS • Flask • React • Python</span>
+                        </div>
+                    </div>
+                    <div class="experience-card-body">
+                        <p>Interested in roles that blend software engineering with machine learning to deliver useful systems to users.</p>
+                        <p>Committed to shipping projects from data cleaning and modeling to deployment and user-facing interfaces.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 5: Projects Showcase -->
+    <section class="section projects" id="projects">
+        <div class="section-content">
+            <span class="section-kicker">Section 03 — What I've Built</span>
+            <h2 class="section-title">03 / <span class="serif-italic">PROJECTS</span></h2>
+            <div class="projects-grid">
+                <div class="project-card" data-project="sports" tabindex="0" role="button" aria-label="Open details for Sports Celebrity Image Classification">
+                    <div class="project-thumb"><div class="project-thumb-art"></div></div>
+                    <span class="project-num">01</span>
+                    <div class="project-header">
+                        <span class="project-date">June 2026</span>
+                        <h3>Sports Celebrity Image Classification</h3>
+                    </div>
+                    <p class="project-desc">Built a complete image-classification workflow from data collection to a deployed prediction experience, covering preprocessing, model training, evaluation, and a user-facing web interface.</p>
+                    <button class="project-link-btn" type="button">View details ↗</button>
+                </div>
+
+                <div class="project-card" data-project="real-estate" tabindex="0" role="button" aria-label="Open details for Real Estate Price Prediction">
+                    <div class="project-thumb"><div class="project-thumb-art"></div></div>
+                    <span class="project-num">02</span>
+                    <div class="project-header">
+                        <span class="project-date">July 2026</span>
+                        <h3>Real Estate Price Prediction</h3>
+                    </div>
+                    <p class="project-desc">Created an end-to-end regression system for property price estimation, including data cleaning, outlier handling, modeling, and live predictions through a Flask and React application.</p>
+                    <button class="project-link-btn" type="button">View details ↗</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 6: Achievements (Publications & Certifications) -->
+    <section class="section achievements" id="achievements">
+        <div class="section-content">
+            <span class="section-kicker">Section 04 — Research &amp; Credentials</span>
+            <h2 class="section-title">04 / <span class="serif-italic">ACHIEVEMENTS</span></h2>
+            <div class="achievements-grid">
+                <div class="publication-box">
+                    <span class="serif-italic" style="color: var(--primary-blue); font-size: 1.2rem; display: block; margin-bottom: 0.8rem;">CERTIFICATIONS</span>
+                    <h3 class="pub-title">AWS Academy Generative AI Foundations</h3>
+                    <div class="pub-conference">Amazon Web Services</div>
+                    <p class="pub-desc">Built confidence in generative AI concepts and foundational cloud-based AI workflows.</p>
+                    <h3 class="pub-title" style="margin-top: 1rem;">Java Programming Certification</h3>
+                    <div class="pub-conference">Coursera</div>
+                    <p class="pub-desc">Strengthened core programming fundamentals and object-oriented thinking.</p>
+                    <h3 class="pub-title" style="margin-top: 1rem;">Python Programming Certification</h3>
+                    <div class="pub-conference">Coursera</div>
+                    <p class="pub-desc">Developed solid groundwork in Python for data science and app development.</p>
+                </div>
+
+                <div class="certifications-container">
+                    <span class="serif-italic" style="color: var(--primary-blue); font-size: 1.2rem; display: block; margin-bottom: 1.5rem;">ACHIEVEMENTS</span>
+                    <ul class="certifications-list">
+                        <li class="cert-item">
+                            <h3 class="cert-name">Participant, ArtPark RoboArena: AI Edition</h3>
+                            <span class="cert-issuer">Indian Institute of Science (IISc), Bengaluru</span>
+                        </li>
+                        <li class="cert-item">
+                            <h3 class="cert-name">Built multiple end-to-end ML applications</h3>
+                            <span class="cert-issuer">Including deployment on AWS EC2 and web delivery via Flask/React</span>
+                        </li>
+                        <li class="cert-item">
+                            <h3 class="cert-name">Strong interest in product-oriented AI</h3>
+                            <span class="cert-issuer">Bridging real-world deployment with technical depth</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 7: Education & Skills -->
+    <section class="section education" id="education">
+        <div class="section-content">
+            <span class="section-kicker">Section 05 — Tools I Use</span>
+            <h2 class="section-title">05 / <span class="serif-italic">TECH STACK</span></h2>
+            <div class="edu-skills-grid edu-skills-grid-single">
+                <div class="skills-category-group">
+                    <div class="skills-category">
+                        <h3>LANGUAGES</h3>
+                        <div class="skills-container">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Java</span>
+                        </div>
+                    </div>
+                    <div class="skills-category">
+                        <h3>MACHINE LEARNING</h3>
+                        <div class="skills-container">
+                            <span class="skill-tag">Linear & Logistic Regression</span>
+                            <span class="skill-tag">Decision Trees</span>
+                            <span class="skill-tag">SVM</span>
+                            <span class="skill-tag">Random Forest</span>
+                            <span class="skill-tag">K-Fold CV</span>
+                            <span class="skill-tag">K-Means</span>
+                            <span class="skill-tag">Naive Bayes</span>
+                            <span class="skill-tag">PCA</span>
+                            <span class="skill-tag">Regularization</span>
+                            <span class="skill-tag">KNN</span>
+                            <span class="skill-tag">Ensemble Learning</span>
+                        </div>
+                    </div>
+                    <div class="skills-category">
+                        <h3>DEEP LEARNING & GENAI</h3>
+                        <div class="skills-container">
+                            <span class="skill-tag">Neural Networks</span>
+                            <span class="skill-tag">TensorFlow</span>
+                            <span class="skill-tag">Keras</span>
+                            <span class="skill-tag">CNNs</span>
+                            <span class="skill-tag">RNNs</span>
+                            <span class="skill-tag">LSTM / GRU</span>
+                            <span class="skill-tag">Transfer Learning</span>
+                            <span class="skill-tag">Word2Vec</span>
+                            <span class="skill-tag">BERT</span>
+                            <span class="skill-tag">Transformers</span>
+                            <span class="skill-tag">AWS Generative AI</span>
+                        </div>
+                    </div>
+                    <div class="skills-category">
+                        <h3>LIBRARIES & TOOLS</h3>
+                        <div class="skills-container">
+                            <span class="skill-tag">NumPy</span>
+                            <span class="skill-tag">Pandas</span>
+                            <span class="skill-tag">Scikit-learn</span>
+                            <span class="skill-tag">Matplotlib</span>
+                            <span class="skill-tag">OpenCV</span>
+                            <span class="skill-tag">Flask</span>
+                            <span class="skill-tag">Git / GitHub</span>
+                            <span class="skill-tag">AWS EC2</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 8: Learning Roadmap -->
+    <section class="section education" id="learning">
+        <div class="section-content">
+            <span class="section-kicker">Section 06 — Next Focus</span>
+            <h2 class="section-title">06 / <span class="serif-italic">LEARNING ROADMAP</span></h2>
+            <div class="publication-box" style="margin-top: 1.5rem;">
+                <h3 class="pub-title" style="font-size: 2rem; margin-bottom: 1rem;">Deep Learning & Generative AI</h3>
+                <p class="pub-desc" style="margin-bottom: 1rem;">
+                    I’m building toward a stronger foundation in neural networks and modern generative AI systems so I can move from classical ML projects into production-ready deep learning and LLM-based applications.
+                </p>
+
+                <div class="project-modal-section">
+                    <h4>Deep Learning Plan</h4>
+                    <ul>
+                        <li><strong>Part 1 – ANN:</strong> fundamentals, backpropagation, activation functions, and optimizers.</li>
+                        <li><strong>Part 2 – CNN:</strong> focus on how convolutional networks outperform traditional image approaches for visual tasks.</li>
+                        <li><strong>Part 3 – RNN/LSTM/GRU:</strong> a useful overview for sequential data and time-based problems.</li>
+                        <li><strong>Part 4 – Transformers/Attention:</strong> high priority because of their relevance in interviews and modern AI systems.</li>
+                    </ul>
+                </div>
+
+                <div class="project-modal-section">
+                    <h4>Generative AI Roadmap</h4>
+                    <ul>
+                        <li><strong>LLM foundations:</strong> understand chat models, prompts, tokenization, and model behavior.</li>
+                        <li><strong>Building a chatbot:</strong> set up the project, environment, API keys, requirements, and basic application flow.</li>
+                        <li><strong>RAG concepts:</strong> learn document loaders, text splitters, vector stores, retrievers, and embeddings.</li>
+                        <li><strong>Agent-style systems:</strong> explore tools, agents, and how an LLM can decide when to call external capabilities.</li>
+                    </ul>
+                </div>
+
+                <div class="project-modal-section">
+                    <h4>Planned Project Direction</h4>
+                    <ul>
+                        <li>Build an AI agent that can interpret user queries and use tools to fetch real-time information.</li>
+                        <li>Apply the same product mindset I use in my ML work: build something useful, test it, and deploy it.</li>
+                        <li>Use this roadmap to strengthen my interview readiness and grow toward more advanced GenAI projects.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 9: Contact Section -->
+    <section class="section contact" id="contact">
+        <!-- SVG Background Metallic "06" -->
+        <div class="contact-bg-number-container">
+            <svg class="contact-bg-number-svg" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+                <text x="50" y="52" dominant-baseline="middle" text-anchor="middle" class="contact-bg-text">06</text>
+            </svg>
+        </div>
+
+        <div class="section-content contact-content-wrapper">
+            <div class="contact-header-wrapper">
+                <span class="section-kicker">Section 06 — Let's Connect</span>
+                <h2 class="section-title contact-title">CONTACT</h2>
+            </div>
+
+            <div class="contact-split-grid contact-split-grid-single">
+                <!-- Details & Socials -->
+                <div class="contact-left-info">
+                    <p class="contact-form-desc">
+                        I’m currently exploring opportunities in machine learning, AI, and software engineering. If you’re hiring, collaborating, or just want to talk about building end-to-end products, feel free to reach out.
+                    </p>
+
+                    <div class="contact-badge-status">
+                        <span class="badge-dot"></span>
+                        <span class="badge-text">Available for ML / AI internships and collaboration</span>
+                    </div>
+
+                    <div class="contact-clock">
+                        <span class="clock-label">Local time · Bengaluru, IN</span>
+                        <span class="clock-time" id="calicut-clock">--:--:-- --</span>
+                    </div>
+
+                    <a href="mailto:salianabhy@gmail.com?subject=Let's%20connect" class="contact-email-cta">
+                        <svg class="email-dashed-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                        <span>salianabhy@gmail.com</span>
+                        <span class="contact-email-cta-arrow">↗</span>
+                    </a>
+
+                    <div class="contact-social-squares">
+                        <a href="https://linkedin.com/in/abhijeet-salian" class="social-square-btn" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn profile">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                                <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/>
+                            </svg>
+                        </a>
+                        <a href="https://github.com/salianabhy" class="social-square-btn" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="GitHub profile">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                                <path d="M12 .5C5.37.5 0 5.87 0 12.5c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58 0-.29-.01-1.04-.02-2.05-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.21.09 1.84 1.24 1.84 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.34-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.29-1.23 3.29-1.23.66 1.66.25 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.8 5.62-5.48 5.92.43.37.81 1.1.81 2.22 0 1.61-.02 2.9-.02 3.29 0 .32.22.7.82.58A12.01 12.01 0 0 0 24 12.5C24 5.87 18.63.5 12 .5z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Float Scroll to Top Bottom Right -->
+            <button class="scroll-top-circular-btn" id="scroll-to-top-button" title="Go to top" aria-label="Go to top">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                    <polyline points="18 15 12 9 6 15"/>
+                </svg>
+            </button>
+
+            <p class="footer-bottom-copy">&copy; 2026 Abhijeet Salian. All rights reserved.</p>
+        </div>
+    </section>
+
+    <div class="project-modal-backdrop" id="project-modal-backdrop" aria-hidden="true">
+        <div class="project-modal" role="dialog" aria-modal="true" aria-labelledby="project-modal-title">
+            <button class="project-modal-close" id="project-modal-close" aria-label="Close project details">×</button>
+            <div id="project-modal-content"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
