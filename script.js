@@ -162,8 +162,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 'Delivered predictions through a Flask backend and a React-based interface for a smooth end-user experience.'
             ],
             stack: ['Python', 'OpenCV', 'Scikit-learn', 'Flask', 'React'],
-            demoUrl: 'https://github.com/salianabhy',
-            githubUrl: 'https://github.com/salianabhy'
+            demoUrl: 'https://celebrity-face-recognition-mu.vercel.app/',
+            githubUrl: 'https://github.com/salianabhy/CelebrityFaceRecognition'
         },
         'real-estate': {
             title: 'Real Estate Price Prediction',
