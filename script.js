@@ -165,6 +165,19 @@ document.addEventListener('DOMContentLoaded', () => {
             demoUrl: 'https://celebrity-face-recognition-mu.vercel.app/',
             githubUrl: 'https://github.com/salianabhy/CelebrityFaceRecognition'
         },
+        'nextword-ai': {
+            title: 'NextWord AI — LSTM Next Word Predictor',
+            date: 'August 2026',
+            summary: 'Built an LSTM-based next-word prediction system trained on a custom text corpus and wrapped in a polished Streamlit app with configurable sampling controls and live vocabulary insights.',
+            overview: [
+                'Trained a Keras LSTM model to tokenize and pad input sequences, then predict probable next words through a softmax output layer.',
+                'Designed a custom Streamlit frontend with a gradient hero section, card-based layout, sidebar controls for prediction count and temperature sampling, and live metadata such as vocabulary size and maximum sequence length.',
+                'Added graceful error handling and a clean user experience so the app feels like a deployable product rather than a notebook demo.'
+            ],
+            stack: ['Python', 'TensorFlow/Keras', 'LSTM', 'NLP', 'Streamlit', 'NumPy'],
+            demoUrl: 'https://rnn-word-predictor.streamlit.app/',
+            githubUrl: 'https://github.com/salianabhy/Word_Predictor_using_RNN'
+        },
         'real-estate': {
             title: 'Real Estate Price Prediction',
             date: 'July 2026',
@@ -185,20 +198,41 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!project) return;
 
         projectModalContent.innerHTML = `
-            <p class="project-modal-kicker">${project.date}</p>
-            <h3 id="project-modal-title">${project.title}</h3>
-            <p class="project-modal-summary">${project.summary}</p>
-            <div class="project-modal-actions">
-                <a href="${project.demoUrl}" target="_blank" rel="noopener noreferrer">View Demo ↗</a>
-                <a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-            </div>
-            <div class="project-modal-section">
-                <h4>What I built</h4>
-                <ul>${project.overview.map(item => `<li>${item}</li>`).join('')}</ul>
-            </div>
-            <div class="project-modal-section">
-                <h4>Tech stack</h4>
-                <ul>${project.stack.map(item => `<li>${item}</li>`).join('')}</ul>
+            <div class="project-modal-shell">
+                <div class="project-modal-hero">
+                    <div class="project-modal-hero-copy">
+                        <p class="project-modal-kicker">Featured project · ${project.date}</p>
+                        <h3 id="project-modal-title">${project.title}</h3>
+                    </div>
+                    <div class="project-modal-badge">Live Project</div>
+                </div>
+
+                <div class="project-modal-summary-card">
+                    <p class="project-modal-summary">${project.summary}</p>
+                    <div class="project-modal-tech-list">
+                        ${project.stack.map(item => `<span class="project-modal-chip">${item}</span>`).join('')}
+                    </div>
+                </div>
+
+                <div class="project-modal-actions">
+                    <a href="${project.demoUrl}" target="_blank" rel="noopener noreferrer">View Demo ↗</a>
+                    <a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+                </div>
+
+                <div class="project-modal-grid">
+                    <div class="project-modal-section">
+                        <h4>What I built</h4>
+                        <ul>${project.overview.map(item => `<li>${item}</li>`).join('')}</ul>
+                    </div>
+                    <div class="project-modal-section">
+                        <h4>Why it stands out</h4>
+                        <ul>
+                            <li>Designed for real users, not just a notebook demo.</li>
+                            <li>Blends machine learning depth with polished product experience.</li>
+                            <li>Focused on deployment-readiness, clarity, and end-to-end delivery.</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         `;
 
