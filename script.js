@@ -187,7 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 'Trained and evaluated regression models to predict property prices and optimized them for reliable results.',
                 'Exposed the solution through a Flask API and React frontend, and deployed the pipeline to AWS EC2.'
             ],
-            stack: ['Python', 'Scikit-learn', 'Flask', 'React', 'AWS EC2'],
+            stack: ['Python', 'Scikit-learn', 'Flask', 'React'],
             demoUrl: 'https://banglore-home-price-predictor-using-ml.onrender.com',
             githubUrl: 'https://github.com/salianabhy/Banglore_home_price_predictor_using_ml'
         }
