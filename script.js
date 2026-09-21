@@ -185,7 +185,7 @@ document.addEventListener('DOMContentLoaded', () => {
             overview: [
                 'Prepared a model-ready dataset by handling missing values, outliers, and feature transformations for better predictive quality.',
                 'Trained and evaluated regression models to predict property prices and optimized them for reliable results.',
-                'Exposed the solution through a Flask API and React frontend, and deployed the pipeline to AWS EC2.'
+                'Exposed the solution through a Flask API and React frontend, and deployed the pipeline to render.'
             ],
             stack: ['Python', 'Scikit-learn', 'Flask', 'React'],
             demoUrl: 'https://banglore-home-price-predictor-using-ml.onrender.com',
